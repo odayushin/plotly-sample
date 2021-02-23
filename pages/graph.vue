@@ -3,6 +3,8 @@
 </template>
 <script>
 import * as Plotly from "plotly.js-dist";
+import sample from "~/modules/sample";
+console.log(sample());
 export default {
   data() {
     return {
