@@ -67,7 +67,7 @@ export default {
     },
   },
   watch: {
-    rows: function (t2, t1) {
+    rows: function () {
       this.plot();
     },
   },
