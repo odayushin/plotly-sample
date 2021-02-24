@@ -1,5 +1,5 @@
 <template>
-  <div id="chart"></div>
+  <graph v-bind:rows="rows"></graph>
 </template>
 <script>
 import plotUtil from "~/modules/plotUtil";
@@ -8,11 +8,6 @@ export default {
     return {
       rows: [],
     };
-  },
-  watch: {
-    rows: function () {
-      plotUtil.plot(this.rows);
-    },
   },
   async mounted() {
     this.rows = await plotUtil.getData();
