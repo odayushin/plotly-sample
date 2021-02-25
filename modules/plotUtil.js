@@ -1,4 +1,4 @@
-import * as Plotly from "plotly.js-dist";
+import Plotly from "plotly.js-dist";
 export default {
     async getData() {
         const url = "https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv";
