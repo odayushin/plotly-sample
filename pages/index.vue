@@ -1,5 +1,8 @@
 <template>
-  <graph v-bind:rows="rows"></graph>
+  <div>
+    <graph v-bind:rows="rows" graph-id="chart"></graph>
+    <graph v-bind:rows="rows" graph-id="chart2"></graph>
+  </div>
 </template>
 <script>
 import plotUtil from "~/modules/plotUtil";

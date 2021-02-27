@@ -16,7 +16,7 @@ export default {
     unpack(rows, key) {
         return rows.map((row) => row[key]);
     },
-    async plot(rows) {
+    async plot(rows, id) {
         const trace1 = {
             type: "scatter",
             mode: "lines",
@@ -50,6 +50,6 @@ export default {
             title: "Basic Time Series",
         };
 
-        Plotly.newPlot("chart", data, layout);
+        Plotly.newPlot(id, data, layout);
     },
 }
