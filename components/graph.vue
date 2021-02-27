@@ -12,5 +12,8 @@ export default {
     },
     deep: true,
   },
+  mounted() {
+    plotUtil.plot(this.rows, this.graphId);
+  },
 };
 </script>
