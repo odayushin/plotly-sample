@@ -4,12 +4,8 @@ export default {
         const url = "https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv";
         return await new Promise((resolve, reject) => {
             Plotly.d3.csv(url, (err, rows) => {
-                if (err) {
-                    reject(err);
-                }
-                if (rows) {
-                    resolve(rows);
-                }
+                if (err) { reject(err) }
+                if (rows) { resolve(rows) }
             });
         });
     },
