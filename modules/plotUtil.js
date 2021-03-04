@@ -48,4 +48,7 @@ export default {
 
         Plotly.newPlot(id, data, layout);
     },
+    downloadImage(id) {
+        Plotly.downloadImage(id, {})
+    }
 }
