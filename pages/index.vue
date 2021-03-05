@@ -2,7 +2,7 @@
   <div>
     <graph v-bind:rows="rows" graph-id="chart"></graph>
     <graph v-bind:rows="rows" graph-id="chart2"></graph>
-    <button id="download" v-on:click="toImage">Download Image</button>
+    <button id="download" v-on:click="downloadImage">Download Image</button>
   </div>
 </template>
 <script>
@@ -14,8 +14,7 @@ export default {
     };
   },
   methods: {
-    toImage() {
-      console.log("toImage呼ばれました");
+    downloadImage() {
       plotUtil.downloadImage("chart");
     },
   },
