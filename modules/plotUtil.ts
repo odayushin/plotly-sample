@@ -1,18 +1,19 @@
-import Plotly from "plotly.js-dist";
+const Plotly = require("plotly.js-dist");
+// import Plotly from "plotly.js-dist";
 export default {
     async getData() {
         const url = "https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv";
         return await new Promise((resolve, reject) => {
-            Plotly.d3.csv(url, (err, rows) => {
+            Plotly.d3.csv(url, (err: Error, rows: []) => {
                 if (err) { reject(err) }
                 if (rows) { resolve(rows) }
             });
         });
     },
-    unpack(rows, key) {
+    unpack(rows: [], key: string) {
         return rows.map((row) => row[key]);
     },
-    async plot(rows, id) {
+    async plot(rows: [], id: string) {
         const trace1 = {
             type: "scatter",
             mode: "lines",
@@ -48,7 +49,7 @@ export default {
 
         Plotly.newPlot(id, data, layout);
     },
-    downloadImage(id) {
+    downloadImage(id: string) {
         Plotly.downloadImage(id, {})
     }
 }
